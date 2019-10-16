@@ -14,3 +14,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->post('exampleRoute', [
+    'as'        => 'example.route',
+    'uses'      => 'ExampleController@exampleRoute'
+]);
+
+$router->post('anotherExampleRoute', [
+    'as'        => 'another.example.route',
+    'uses'      => 'AnotherExampleController@anotherExampleRoute'
+]);
